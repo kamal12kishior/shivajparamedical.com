@@ -1,0 +1,290 @@
+:root {
+  --primary: #00ddbb;
+  --secondary: #ff00aa;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*outline: 0.5px solid greenyellow;*/
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+}
+#up{
+  position: fixed;
+  width: 80vw;
+  height: 80vh;
+  z-index: 15;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1px);
+  display: grid;
+  place-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px gray;
+  display: none;
+  
+}
+#up ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#up ul a{
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  font-size:20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  border:2px solid goldenrod;
+}
+#up ul a:hover{
+  background: greenyellow;
+}
+nav {
+  height: 50px;
+  width: 100vw;
+  background-color: var(--secondary);
+  position: fixed;
+  top: -50px;
+  left:0;
+  z-index: 20;
+  transition:all 1s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+nav div {
+  border:2px solid #fff;
+  border-radius: 5px;
+  height: 40px;
+  width:40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav div hr{
+  
+  background-color: #fff;
+  width: 80%;
+}
+nav h1{
+  color: #fff;
+  text-align: center;
+}
+header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column-reverse;
+
+  position: relative;
+}
+
+header #heading {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(transparent, var(--primary),transparent)
+}
+
+header #heading h1 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+header #heading span {
+
+  font-size: 0.7rem;
+  right: 0;
+
+}
+
+#text {
+  width: 100vw;
+  height: 50vh;
+  padding: 30px;
+  background: linear-gradient();
+  background-size: cover;
+}
+
+#text p {
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+div#slider {
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  height: auto;
+}
+
+div#slider div {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  font-size: 0;
+  animation: 10s slider infinite;
+}
+
+div#slider div img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+
+  20% {
+    left: 0%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+}
+
+#courses {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url(/assets/medical_background.jpg);
+  background-size: cover;
+}
+
+#admission{
+  background-image: url(/assets/map.jpg);
+  background-size: cover;
+  width: 100vw;
+  
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#admission h2{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+#admission h3{
+  font-size: 17px;
+  margin: 30px 0 5px 20px;
+}
+#admission p{
+  margin: 0 0 0 20px;
+}
+#admission a{
+  text-align: center;
+  margin: 10px;
+}
+#admission h1 {
+  margin: 20px;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 20px;
+}
+#admission h1 span{
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#admission video{
+  width: 100%;
+  
+}
+#about{
+  width: 100vw;
+  padding: 30px 10px;
+  
+}
+#about hr{
+  margin: 40px 0 ;
+}
+#about h2{
+  width:100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#about p{
+  font-size: 16px;
+  
+}
+#about ul{
+  padding: 5px 25px;
+}
+#about ul li{
+  margin: 10px 0;
+  font-size: 15px;
+}
+footer{
+  width: 100vw;
+  padding: 30px;
+  background: lightcoral;  
+}
+footer h4{
+  font-size: 10px;
+  margin: 13px 0;
+  width: 100%;
+  
+  text-align: center;
+}
+#admission button{
+  background: red;
+  height: 40px;
+  width: 60%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 5px;
+}
